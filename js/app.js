@@ -15,6 +15,7 @@ let socketUrlInput, connectBtn, disconnectBtn, connectionStatus;
 let eventNameInput, addListenerBtn, activeListenersList;
 let emitEventNameInput, emitDataInput, emitBtn, dataIsJsonCheckbox;
 let messagesLog, clearMessagesBtn;
+let socketIdBadge, socketIdValue;
 
 // Initialize the application
 function init() {
@@ -42,6 +43,9 @@ function initializeElements() {
   
   messagesLog = document.getElementById('messages-log');
   clearMessagesBtn = document.getElementById('clear-messages-btn');
+  
+  socketIdBadge = document.getElementById('socket-id');
+  socketIdValue = document.getElementById('socket-id-value');
 }
 
 function attachEventListeners() {
@@ -183,14 +187,17 @@ function attachSocketListeners() {
   // Handle connection status events
   socket.on('connect', function() {
     updateConnectionStatus('connected');
+    updateSocketId(socket.id);
   });
   
   socket.on('disconnect', function() {
     updateConnectionStatus('disconnected');
+    hideSocketId();
   });
   
   socket.on('connect_error', function(error) {
     updateConnectionStatus('disconnected');
+    hideSocketId();
   });
 
   // Attach all other listeners
@@ -209,6 +216,18 @@ function updateConnectionStatus(status) {
   
   connectBtn.disabled = status === 'connected' || status === 'connecting';
   disconnectBtn.disabled = status === 'disconnected';
+}
+
+function updateSocketId(socketId) {
+  if (socketId) {
+    socketIdValue.textContent = socketId;
+    socketIdBadge.style.display = 'inline-flex';
+  }
+}
+
+function hideSocketId() {
+  socketIdBadge.style.display = 'none';
+  socketIdValue.textContent = '';
 }
 
 function addListener() {

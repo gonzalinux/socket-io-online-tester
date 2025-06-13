@@ -317,6 +317,24 @@ textarea {
   transform: scale(1.1);
 }
 
+.socket-id-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: #e2e8f0;
+  color: #4a5568;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  border: 1px solid #cbd5e0;
+}
+
+#socket-id-value {
+  color: #2d3748;
+  font-weight: 600;
+}
+
 /* ==========================================================================
    Messages Log
    ========================================================================== */
