@@ -1,0 +1,25 @@
+{
+  "short_name": "Socket.IO Tester",
+  "name": "Socket.IO Online Tester",
+  "description": "A web-based tool for testing Socket.IO connections, listening to events, and emitting messages",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "scope": "/",
+  "categories": ["developer", "utilities", "productivity"],
+  "lang": "en-US"
+}

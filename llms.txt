@@ -1,0 +1,65 @@
+# Socket.IO Online Tester
+
+## Project Overview
+Socket.IO Online Tester is a web-based tool for testing Socket.IO connections, listening to events, and emitting messages. It provides a clean, intuitive interface for developers to debug and test real-time Socket.IO applications.
+
+## Key Features
+- Connect to Socket.IO servers with custom URLs (defaults to localhost:8080)
+- Add custom event listeners with real-time message counting
+- Send events with JSON or plain text data
+- Real-time message log with newest-first ordering
+- Persistent message history via localStorage
+- URL-based listener configuration sharing
+- Responsive design for desktop and mobile
+- Built-in connection status indicators
+
+## Tech Stack
+- **Frontend**: Vanilla HTML5, CSS3, JavaScript (ES6+)
+- **Real-time**: Socket.IO Client v4.8.1
+- **Build**: Webpack 5 with dev/prod configurations
+- **Styling**: Custom CSS with modern features (Grid, Flexbox, CSS Variables)
+- **Storage**: localStorage for message persistence
+- **PWA**: Web App Manifest for installable experience
+
+## Project Structure
+```
+├── index.html              # Main application page
+├── css/style.css           # Application styles
+├── js/app.js              # Main application logic
+├── robots.txt             # SEO configuration
+├── site.webmanifest       # PWA manifest
+├── LICENSE.txt            # MIT license
+├── 404.html              # Custom error page
+└── llms.txt              # This file
+```
+
+## Development Commands
+- `npm start` - Start development server with hot reload
+- `npm run build` - Build production bundle
+
+## Architecture Notes
+- **No frameworks**: Built with vanilla JavaScript for simplicity and performance
+- **Modular design**: Separate functions for connection, listeners, messaging, and storage
+- **Event-driven**: Uses Socket.IO event system for real-time communication
+- **Persistent state**: Messages stored in localStorage, listeners in URL params
+- **Progressive enhancement**: Works without JavaScript for basic navigation
+
+## Code Patterns
+- Procedural JavaScript with global variables and functions
+- DOM manipulation using native APIs
+- Event delegation for dynamic content
+- localStorage for client-side persistence
+- URL manipulation for shareable configurations
+- CSS Grid/Flexbox for responsive layouts
+
+## Browser Support
+- Modern browsers with ES6+ support
+- Socket.IO client handles WebSocket fallbacks
+- CSS Grid and Flexbox for layout
+- localStorage for persistence
+
+## License
+MIT License - see LICENSE.txt for details
+
+## Author
+gonzalinux - https://github.com/gonzalinux

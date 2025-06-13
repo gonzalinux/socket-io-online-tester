@@ -1,0 +1,9 @@
+# www.robotstxt.org/
+# Socket.IO Online Tester - Public tool for testing Socket.IO connections
+
+# Allow crawling of all content
+User-agent: *
+Allow: /
+
+# Sitemap (if you add one later)
+# Sitemap: https://your-domain.com/sitemap.xml

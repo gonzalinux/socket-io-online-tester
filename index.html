@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Socket.IO Online Tester</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Socket.IO Online Tester - Connect, listen, and emit events">
+
+  <meta property="og:title" content="Socket.IO Online Tester">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="Socket.IO Online Tester">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Socket.IO Online Tester</h1>
+      <p>Connect to Socket.IO servers, listen to events, and emit messages</p>
+    </header>
+
+    <main>
+      <!-- Connection Section -->
+      <section class="connection-section full-width">
+        <h2>Connection</h2>
+        <div class="connection-form">
+          <input type="text" id="socket-url" placeholder="http://localhost:8080" value="http://localhost:8080">
+          <button id="connect-btn" class="btn btn-primary">Connect</button>
+          <button id="disconnect-btn" class="btn btn-secondary" disabled>Disconnect</button>
+          <span id="connection-status" class="status-indicator disconnected">Disconnected</span>
+        </div>
+      </section>
+
+      <!-- Event Listeners Section -->
+      <section class="listeners-section">
+        <h2>Event Listeners</h2>
+        <div class="listener-form">
+          <input type="text" id="event-name" placeholder="Enter event name">
+          <button id="add-listener-btn" class="btn btn-primary">Add Listener</button>
+        </div>
+        <div class="listeners-list">
+          <h3>Active Listeners</h3>
+          <ul id="active-listeners"></ul>
+        </div>
+      </section>
+
+      <!-- Event Emitter Section -->
+      <section class="emitter-section">
+        <h2>Send Events</h2>
+        <div class="emitter-form">
+          <div class="form-group">
+            <input type="text" id="emit-event-name" placeholder="Enter event name">
+          </div>
+          <div class="form-group">
+            <div class="data-type-selector">
+              <label>
+                <input type="checkbox" id="data-is-json"> Send as JSON
+              </label>
+            </div>
+            <textarea id="emit-data" placeholder="Hello World"></textarea>
+          </div>
+          <button id="emit-btn" class="btn btn-primary">Send Event</button>
+        </div>
+      </section>
+
+      <!-- Messages Log Section -->
+      <section class="messages-section full-width">
+        <h2>Messages Log</h2>
+        <div class="messages-controls">
+          <button id="clear-messages-btn" class="btn btn-secondary">Clear Log</button>
+        </div>
+        <div id="messages-log" class="messages-log"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made by <a href="https://github.com/gonzalinux" target="_blank" rel="noopener noreferrer">@gonzalinux</a></p>
+      <p>Repo of this page: <a href="https://github.com/gonzalinux/socket-io-online-tester" target="_blank" rel="noopener noreferrer">socket-io-online-tester</a></p>
+    </footer>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+
+</html>
